@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+body {
+  font-family: "Manrope", sans-serif;
+  color: black;
+  background-color: #ecf2f8; }
+
+container {
+  width: 100%; }
+
+.cardview {
+  width: 700px;
+  height: 285px;
+  margin: 130px auto;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.11);
+  background-color: white;
+  position: relative;
+  color: #48556a;
+  border-radius: 14px; }
+  .cardview .left,
+  .cardview .right {
+    float: left;
+    box-sizing: border-box; }
+  .cardview .left {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    background: url("../images/drawers.jpg") 0px 0px no-repeat;
+    background-size: cover;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px; }
+  .cardview .right {
+    width: 60%;
+    padding: 30px; }
+    .cardview .right .title {
+      font-weight: 700;
+      font-size: 21px; }
+    .cardview .right p {
+      color: #6d7f97;
+      margin: 10px 0px;
+      font-size: 14px; }
+    .cardview .right .bottom {
+      height: 60px;
+      margin-top: 15px; }
+      .cardview .right .bottom .profile,
+      .cardview .right .bottom .info,
+      .cardview .right .bottom .sharebtn {
+        float: left;
+        box-sizing: border-box; }
+      .cardview .right .bottom .profile {
+        width: 15%; }
+        .cardview .right .bottom .profile img {
+          width: 40px;
+          border-radius: 50%; }
+      .cardview .right .bottom .info {
+        width: 60%; }
+        .cardview .right .bottom .info h3 {
+          margin: 0px;
+          font-size: 14px;
+          font-weight: 700; }
+        .cardview .right .bottom .info p {
+          margin: 0px;
+          font-size: 14px; }
+      .cardview .right .bottom .sharebtn {
+        width: 17px;
+        height: 17px;
+        padding: 14px;
+        margin-top: 4px;
+        float: right;
+        background-color: #ecf2f8;
+        border-radius: 50%;
+        position: relative; }
+        .cardview .right .bottom .sharebtn > img {
+          position: relative;
+          top: -11px;
+          right: 7px; }
+        .cardview .right .bottom .sharebtn.active {
+          background-color: #48556a; }
+          .cardview .right .bottom .sharebtn.active img {
+            filter: brightness(3); }
+          .cardview .right .bottom .sharebtn.active .popup {
+            display: block; }
+        .cardview .right .bottom .sharebtn .popup {
+          display: none;
+          position: absolute;
+          z-index: 100;
+          top: -61px;
+          left: -119px;
+          width: 261px;
+          height: 46px;
+          padding: 13px 37px;
+          box-sizing: border-box;
+          background-color: #48556a;
+          border-radius: 12px;
+          letter-spacing: 9px;
+          box-shadow: 10px 10px 13px rgba(0, 0, 0, 0.11); }
+          .cardview .right .bottom .sharebtn .popup .item {
+            color: white;
+            float: left;
+            margin-right: 14px; }
+            .cardview .right .bottom .sharebtn .popup .item h3 {
+              color: #9eafc2;
+              font-size: 12px;
+              margin: 0px;
+              text-transform: uppercase; }
+          .cardview .right .bottom .sharebtn .popup .item.last {
+            margin-right: 0px; }
+          .cardview .right .bottom .sharebtn .popup::after {
+            content: "";
+            width: 0px;
+            height: 10px;
+            border-right: 10px solid rgba(0, 0, 0, 0);
+            border-left: 10px solid rgba(0, 0, 0, 0);
+            border-top: 10px solid #48556a;
+            position: absolute;
+            left: 125px;
+            top: 46px; }
+
+@media only screen and (max-width: 768px) {
+  .cardview {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 100px; }
+    .cardview .left,
+    .cardview .right {
+      width: 100%; }
+    .cardview .left {
+      height: 240px;
+      border-radius: 0px; }
+    .cardview .right .bottom .profile {
+      width: 29%; }
+      .cardview .right .bottom .profile img {
+        width: 60px; }
+    .cardview .right .bottom .info {
+      padding-top: 7px;
+      width: 50%; }
+    .cardview .right .bottom .sharebtn {
+      width: 36px;
+      height: 36px; }
+      .cardview .right .bottom .sharebtn.active .popup {
+        left: auto;
+        right: 0px;
+        border-bottom-right-radius: 0PX; }
+        .cardview .right .bottom .sharebtn.active .popup::after {
+          left: auto;
+          right: 0px; }
+      .cardview .right .bottom .sharebtn img {
+        top: -7px;
+        right: 2px; } }
+
+/*# sourceMappingURL=style.css.map */

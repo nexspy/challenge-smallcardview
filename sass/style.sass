@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap')
+
+$c-verydarkblue: hsl(217, 19%, 35%)
+$c-darkblue: hsl(214, 17%, 51%)
+$c-grayblue: hsl(212, 23%, 69%)
+$c-lightblue: hsl(210, 46%, 95%)
+    
+body
+    font-family: 'Manrope', sans-serif
+    color: black
+    background-color: $c-lightblue
+
+
+container
+    width: 100%
+
+
+.cardview
+    width: 700px
+    height: 285px
+    margin: 130px auto
+    box-sizing: border-box
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.11)
+    background-color: white
+    position: relative
+    color: $c-verydarkblue
+    border-radius: 14px
+
+    .left,
+    .right
+        float: left
+        box-sizing: border-box
+
+    .left
+        width: 40%
+        height: 100%
+        overflow: hidden
+        background: url('../images/drawers.jpg') 0px 0px no-repeat
+        background-size: cover
+        border-top-left-radius: 14px
+        border-bottom-left-radius: 14px
+
+    
+    .right
+        width: 60%
+        padding: 30px
+
+        .title
+            font-weight: 700
+            font-size: 21px
+
+        p
+            color: $c-darkblue
+            margin: 10px 0px
+            font-size: 14px
+
+        .bottom
+            height: 60px
+            margin-top: 15px
+
+            .profile,
+            .info,
+            .sharebtn
+                float: left
+                box-sizing: border-box
+
+            .profile
+                width: 15%
+
+                img
+                    width: 40px
+                    border-radius: 50%
+
+            .info
+                width: 60%
+
+                h3
+                    margin: 0px
+                    font-size: 14px
+                    font-weight: 700
+                p
+                    margin: 0px
+                    font-size: 14px
+            
+            .sharebtn
+                width: 17px
+                height: 17px
+                padding: 14px
+                margin-top: 4px
+                float: right
+                background-color: $c-lightblue
+                border-radius: 50%
+                position: relative
+
+                > img
+                    position: relative
+                    top: -11px
+                    right: 7px
+
+
+                &.active
+                    background-color: $c-verydarkblue
+
+                    img
+                        filter: brightness(3)
+
+                    .popup
+                        display: block
+                .popup
+                    display: none
+                    position: absolute
+                    z-index: 100
+                    top: -61px
+                    left: -119px
+                    width: 261px
+                    height: 46px
+                    padding: 13px 37px
+                    box-sizing: border-box
+                    background-color: $c-verydarkblue
+                    border-radius: 12px
+                    letter-spacing: 9px
+                    box-shadow: 10px 10px 13px rgba(0,0,0,0.11)
+
+                    .item
+                        color: white
+                        float: left
+                        margin-right: 14px
+
+                        h3
+                            color: $c-grayblue
+                            font-size: 12px
+                            margin: 0px
+                            text-transform: uppercase
+
+                    .item.last
+                        margin-right: 0px
+
+
+                    &::after
+                        content: ""
+                        width: 0px
+                        height: 10px
+                        border-right: 10px solid rgba(0,0,0,0)
+                        border-left: 10px solid rgba(0,0,0,0)
+                        border-top: 10px solid $c-verydarkblue
+
+                        position: absolute
+                        left: 125px
+                        top: 46px
+
+
+
+@media only screen and (max-width: 768px)
+    .cardview
+        width: 90%
+        height: auto
+        overflow: hidden
+        margin-top: 100px
+        
+        .left,
+        .right
+            width: 100%
+
+        .left
+            height: 240px
+            border-radius: 0px
+
+        .right
+            .bottom
+                .profile
+                    width: 29%
+
+                    img
+                        width: 60px
+
+                .info
+                    padding-top: 7px
+                    width: 50%
+
+
+                .sharebtn
+                    width: 36px
+                    height: 36px
+
+                    &.active
+                        .popup
+                            left: auto
+                            right: 0px
+                            border-bottom-right-radius: 0PX
+
+                            &::after
+                                left: auto
+                                right: 0px
+
+                    img
+                        top: -7px
+                        right: 2px
